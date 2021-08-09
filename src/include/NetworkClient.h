@@ -51,6 +51,8 @@ class NetworkClient
     bool joinAP(const char *ssid, const char *pass);
     void disconnect();
     bool isConnected();
+    IPAddress getSoftAPIP();
+    IPAddress getLocalIP();
 
     uint8_t *downloadFile(const char *url, int32_t *defaultLen);
     uint8_t *downloadFile(WiFiClient *url, int32_t len);

@@ -52,6 +52,16 @@ bool NetworkClient::joinAP(const char *ssid, const char *pass)
     return 1;
 }
 
+IPAddress NetworkClient::getSoftAPIP()
+{
+    return WiFi.softAPIP();
+}
+
+IPAddress NetworkClient::getLocalIP()
+{
+    return WiFi.localIP();
+}
+
 /**
  * @brief       disconnect function turns of inkplate wifi mode
  */
