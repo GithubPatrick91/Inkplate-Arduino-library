@@ -34,7 +34,6 @@ bool NetworkClient::joinAP(const char *ssid, const char *pass)
 {
     WiFi.mode(WIFI_MODE_STA);
     WiFi.begin(ssid, pass);
-
     delay(3000);
     Serial.print("Connecting to wifi.");
     int cnt = 0;
@@ -51,6 +50,12 @@ bool NetworkClient::joinAP(const char *ssid, const char *pass)
     Serial.println();
     return 1;
 }
+
+bool NetworkClient::openSoftAP(const char *ssid, const char *pass)
+{
+    return WiFi.softAP(ssid, pass);
+}
+
 
 IPAddress NetworkClient::getSoftAPIP()
 {

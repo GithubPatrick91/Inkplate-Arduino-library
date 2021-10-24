@@ -49,6 +49,8 @@ class NetworkClient
 {
   public:
     bool joinAP(const char *ssid, const char *pass);
+    bool openSoftAP(const char *ssid, const char *pass);
+
     void disconnect();
     bool isConnected();
     IPAddress getSoftAPIP();
